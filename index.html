@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>GLYU</title>
+    <link rel="icon" href="assets/GLYULOGO.jpg" type="image/x-icon">
+    <style>
+        :root {
+            --main-bg: white;
+            --accent-color: black;
+        }
+        body {
+            font-family: sans-serif;
+            flex-direction: column;
+            background-color: var(--main-bg, white);
+            color: var(--accent-color, black);
+        }
+
+        header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            flex-direction: row ;
+            background-color: black;
+            color: white;
+            padding: 1.5rem;
+            margin: 0px;
+        }
+
+        nav {
+            display: inline;
+            padding: 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 1rem;
+        }
+        
+        nav a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            border-radius: 5px 5px 0 0;
+            border: 1px white;
+            border-bottom: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            transform: scale(1.05);
+            transition: transform 0.5s ease;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 0px;
+            min-height: 80dvh;
+        }
+
+        aside {
+            flex: 1;
+            background-color: darkgrey;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        aside-info {
+            display: block;
+        }
+
+        aside-info details {
+            margin-top: 1rem;
+        }
+
+        #menu > div {
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: darkgray;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+
+        #menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: left;
+        }
+
+        #menu h2 {
+            margin-top: 0;
+        }
+
+        #hours article,
+        #feed-back article {
+            background-color: darkgray;
+            padding: 1rem;
+            border: 1px solid black;
+            margin-top: 1rem;
+        }
+
+        figure img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            max-width: 200px;
+        }
+
+
+
+        footer {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: black;
+            color: white;
+            padding: 1.5rem;
+            margin: 0px;    
+        }
+
+        @media (max-width: 600px) {
+            main {
+                flex-direction: column;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+    <script>
+    </script>
+  </head>
+  <body>
+    <noscript>Please enable JavaScript for full functionality.</noscript>
+    <header>
+        <hgroup>
+            <h1 style="display: inline">GLYU</h1>
+            <p style="display: inline"; margin-left: 1rem;>Christian Cafe</p>
+        </hgroup>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#hours">Hours</a></li>
+                <li><a href="#feed-back">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <h4>Did you know</h4>
+            <p>We are connected to <strong>Graceway Baptist Church</strong></p>
+            <details>
+            <verse-card>
+                <summary>Bible Verse</summary>
+                "For God so loved the world, that he gave his only begotten Son, 
+                that whosoever believeth in him should not perish, but have everlasting life."
+                <em>John 3:16</em>
+            </verse-card>
+            </details>
+        </aside>
+
+        <section id="menu">
+            <div>
+                <h2>Matcha Latte</h2>
+                <figure>
+                    <img src="assets/matcha.jpg" alt="Matcha">
+                    <figcaption>Made with ceremonial grade matcha.</figcaption>
+                </figure>
+                <p>
+                    Bamboo whisked matcha on top of whole milk.
+                </p>
+            </div>
+
+            <div>
+                <h2>Latte</h2>
+                <figure>
+                    <img src="assets/Latte.jpg" alt="Latte">
+                    <figcaption>Made with fresh roasted coffee beans.</figcaption>
+                </figure>
+                <p>
+                    Espresso shot over whole milk.
+                </p>
+            </div>
+
+            <div>
+                <h2>Vietnamese Coffee</h2>
+                <figure>
+                    <img src="assets/Viet.jpg" alt="Viet">
+                    <figcaption>Made with traditional robusta beans.</figcaption>
+                </figure>
+                <p>
+                    Vietnamese coffee slow brewed over condensed milk.
+                </p>
+            </div>
+
+            <article>
+                <h3>Flavor Add Ons</h3>
+                <ul>
+                    <li>Lavendar</li>
+                    <li>Strawberry</li>
+                    <li>Vanilla</li>
+                </ul>
+                <h3>Milk Subs</h3>
+                <ul>
+                    <li>Oat Milk</li>
+                    <li>Almond Milk</li>
+                    <li>Soy Milk</li>
+                    <li>Coconut Milk</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="hours">
+            <article> 
+                <h2>Store Hours</h2>
+                <table border="1" cellpadding="8" cellspacing="0" width="100%">
+                  <caption><strong>Weekly Hours</strong></caption>
+                  <thead bgcolor="#dddddd">
+                    <tr>
+                      <th>Day</th>
+                      <th>Hours</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td align="center">Mon-Fri</td>
+                      <td align="center">8am - 4pm</td>
+                    </tr>
+                    <tr>
+                      <td align="center">Sat</td>
+                      <td align="center">9am - 2pm</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2" align="center"><em>Closed Sunday</em></td>
+                    </tr>
+                  </tfoot>
+                </table>
+            </article>
+        </section>
+
+        <section id="feed-back">
+            <article>
+                <h2>Give Us Feedback!</h2>
+                <form>
+                    <fieldset>
+                        <legend>Feedback Form</legend>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email"><br>
+
+                        <label for="drink">Drink:</label>
+                        <select id="drink" name="drink">
+                        <option>Latte</option>
+                        <option>Matcha</option>
+                        <option>Viet Coffee</option>
+                        </select><br>
+
+                        <label for="additional-feedback">Additional Feedback:</label><br>
+                        <textarea id="additional-feedback" name="additional-feedback" rows="4" cols="40" placeholder="Leave us some feedback..."></textarea><br>
+
+                        <input type="submit" value="Send">
+                    </fieldset>
+                </form>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 GLYU Christian Cafe</p>
+        <address>
+            123 Cafe Street<br>
+            San Diego, CA 90210
+        </address>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#hours">Hours</a></li>
+                <li><a href="#feed-back">Feedback</a></li>
+                <li><a href="#top">Back to Top</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+  </body>
+</html>
